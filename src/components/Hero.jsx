@@ -18,10 +18,8 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Animated Background */}
       <div className="absolute inset-0 gradient-bg opacity-20"></div>
       
-      {/* Floating Orbs */}
       <div className="absolute inset-0">
         <div 
           className="absolute w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
@@ -51,7 +49,6 @@ const Hero = () => {
         ></div>
       </div>
       
-      {/* Content */}
       <div className="relative z-10 text-center animate-fade-in px-4">
         <div className="mb-8">
           <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold mb-4">

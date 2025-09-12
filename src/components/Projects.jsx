@@ -1,18 +1,19 @@
 import { useState } from 'react'
 import {  Github, Eye, FolderGit2 } from 'lucide-react'
+import { desc, g, title } from 'framer-motion/client'
 
 const Projects = () => {
   const [filter, setFilter] = useState('all')
 const projects = [
     {
       id: 1,
-      title: 'Smart Study Assistant',
+      title: ' Study Partner',
       description: 'An AI-powered platform that generates quizzes, flashcards, and tracks progress from notes or PDFs.',
       technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Cloudinary', 'OpenAI API'],
-      category: 'fullstack',
+      category: ['fullstack' , 'AI'],
       image: 'gradient-to-br from-indigo-500 to-purple-600',
-      demoUrl: '#',
-      githubUrl: 'https://github.com/Payal-gurunani/smartStudy',
+      demoUrl: 'https://study-partner-psi.vercel.app/',
+      githubUrl: 'https://github.com/Payal-gurunani/Study-Partner',
       featured: true
     },
     {
@@ -69,6 +70,17 @@ const projects = [
       image: 'gradient-to-br from-gray-600 to-gray-800',
       githubUrl: 'https://github.com/Payal-gurunani/contact-manager/tree/main/backContact',
       featured: false
+    },
+    {
+      id: 7,
+      title:"NeoBot",
+      description: "An AI chatbot built with React for the frontend  utilizing OpenAI's GPT-3.5-turbo model to provide intelligent responses.",
+      technologies: ['React', 'OpenRouter API'],
+      image: 'gradient-to-br from-gray-600 to-gray-800',
+      category: ['frontend','AI' ],
+      githubUrl: 'https://github.com/Payal-gurunani/NeoBot',
+      featured: false
+
     }
 ]
   const categories = [
@@ -76,11 +88,17 @@ const projects = [
     { id: 'fullstack', name: 'Full Stack' },
     { id: 'frontend', name: 'Frontend' },
     { id: 'backend', name: 'Backend' },
+    { id: 'AI', name: 'AI' },
+    
   ]
 
   const filteredProjects = filter === 'all'
     ? projects
-    : projects.filter(project => project.category === filter)
+    : projects.filter(project => 
+      Array.isArray(project.category)
+        ? project.category.includes(filter)
+        : project.category === filter
+    );
 
   return (
     <section id="projects" className="py-20 px-4 bg-gray-900 text-white">
