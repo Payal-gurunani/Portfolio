@@ -28,7 +28,7 @@ const About = () => {
           <h2 className="text-4xl sm:text-5xl font-bold gradient-text mb-6">About Me</h2>
           <div className="h-1 w-24 mx-auto bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-8"></div>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-  I’m a passionate full stack developer who loves building real-world apps that are not only functional, and  useful. From frontend UI to backend logic, I enjoy making things that people want to use.
+  I’m a passionate full stack developer who loves building real-world apps that are not only functional and  useful. From frontend UI to backend logic, I enjoy making things that people want to use.
 </p>
         </div>
         
@@ -40,9 +40,7 @@ const About = () => {
                 I'm currently learning DSA and improving my problem-solving skills. Alongside that, I'm working on full stack projects to build real-world applications and strengthen my development skills.
             </p>
 
-              <p className="text-gray-300 leading-relaxed mb-8">
-                I’m not coding, I enjoy trying out new tools, improving my skills, or just helping others in the dev community.
-            </p>
+           
 
               
               {/* Stats */}
