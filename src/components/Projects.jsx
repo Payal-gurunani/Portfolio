@@ -78,6 +78,7 @@ const projects = [
       technologies: ['React', 'OpenRouter API'],
       image: 'gradient-to-br from-gray-600 to-gray-800',
       category: ['frontend','AI' ],
+      demoUrl: "https://neo-bot-ten.vercel.app/",
       githubUrl: 'https://github.com/Payal-gurunani/NeoBot',
       featured: false
 
