@@ -170,7 +170,7 @@ const Projects = () => {
                       className="flex items-center gap-1 text-blue-400 hover:underline"
                     >
                       <Eye className="w-4 h-4" />
-                      Demo
+                      Live
                     </a>
                   )}
                   <a
