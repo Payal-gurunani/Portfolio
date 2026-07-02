@@ -1,23 +1,46 @@
 import { useState } from 'react'
-import {  Github, Eye, FolderGit2 } from 'lucide-react'
+import { Github, Eye, FolderGit2 } from 'lucide-react'
 import { desc, g, title } from 'framer-motion/client'
 
 const Projects = () => {
   const [filter, setFilter] = useState('all')
-const projects = [
+  const projects = [
     {
       id: 1,
+      title: "ViralForge AI",
+      description: "A full-stack AI content generation platform built with Next.js and FastAPI, leveraging DSPy and LLMs to automate content creation and optimize prompts for high-quality, context-aware outputs. Features JWT-based authentication, scalable API architecture, and real-time user interaction.",
+      technologies: ['Next.js', 'React', 'FastAPI', 'DSPy', 'MongoDB', 'JWT', 'Tailwind CSS', 'Axios'],
+      image: 'gradient-to-br from-gray-600 to-gray-800',
+      category: ['fullstack', 'AI'],
+      demoUrl: "https://viral-forge-ai-rose.vercel.app/",
+      githubUrl: 'https://github.com/Payal-gurunani/ViralForge_AI',
+      featured: true
+    },
+    {
+      id: 2,
+      title: "NeoBot",
+      description: "An AI chatbot built with React for the frontend  utilizing OpenAI's GPT-3.5-turbo model to provide intelligent responses.",
+      technologies: ['React', 'OpenRouter API'],
+      image: 'gradient-to-br from-gray-600 to-gray-800',
+      category: ['frontend', 'AI'],
+      demoUrl: "https://neo-bot-ten.vercel.app/",
+      githubUrl: 'https://github.com/Payal-gurunani/NeoBot',
+      featured: false
+
+    },
+    {
+      id: 3,
       title: ' Study Partner',
       description: 'An AI-powered platform that generates quizzes, flashcards, and tracks progress from notes or PDFs.',
       technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Cloudinary', 'OpenAI API'],
-      category: ['fullstack' , 'AI'],
+      category: ['fullstack', 'AI'],
       image: 'gradient-to-br from-indigo-500 to-purple-600',
       demoUrl: 'https://study-partner-psi.vercel.app/',
       githubUrl: 'https://github.com/Payal-gurunani/Study-Partner',
       featured: true
     },
     {
-      id: 2,
+      id: 4,
       title: 'Smart Expense',
       description: 'A full-stack expense management app with budgets, monthly summaries, pie charts, and CRUD features.',
       technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT Auth'],
@@ -29,7 +52,7 @@ const projects = [
     },
 
     {
-      id: 3,
+      id: 5,
       title: 'Finance Tracker',
       description: 'A responsive UI for tracking personal finances, built to visualize monthly expenses and insights.',
       technologies: ['React', 'Recharts', 'Tailwind CSS'],
@@ -40,7 +63,7 @@ const projects = [
       featured: false
     },
     {
-      id: 4,
+      id: 6,
       title: 'Password Generator',
       description: 'A simple tool to generate secure passwords with various strength and character options.',
       technologies: ['React', 'Tailwind CSS'],
@@ -51,7 +74,7 @@ const projects = [
       featured: false
     },
     {
-      id: 5,
+      id: 7,
       title: 'Resume Builder',
       description: 'A customizable resume builder with live preview, multiple templates, and export-to-PDF feature.',
       technologies: ['React', 'Tailwind CSS', 'Framer Motion', 'html2canvas', 'jsPDF'],
@@ -62,7 +85,7 @@ const projects = [
       featured: true
     },
     {
-      id: 6,
+      id: 8,
       title: 'Contact Manager API',
       description: 'A backend-only project built to learn RESTful APIs, including CRUD operations, auth, and validation.',
       technologies: ['Node.js', 'Express', 'MongoDB', 'JWT Auth'],
@@ -71,31 +94,20 @@ const projects = [
       githubUrl: 'https://github.com/Payal-gurunani/contact-manager/tree/main/backContact',
       featured: false
     },
-    {
-      id: 7,
-      title:"NeoBot",
-      description: "An AI chatbot built with React for the frontend  utilizing OpenAI's GPT-3.5-turbo model to provide intelligent responses.",
-      technologies: ['React', 'OpenRouter API'],
-      image: 'gradient-to-br from-gray-600 to-gray-800',
-      category: ['frontend','AI' ],
-      demoUrl: "https://neo-bot-ten.vercel.app/",
-      githubUrl: 'https://github.com/Payal-gurunani/NeoBot',
-      featured: false
-
-    }
-]
+    
+  ]
   const categories = [
     { id: 'all', name: 'All Projects' },
     { id: 'fullstack', name: 'Full Stack' },
     { id: 'frontend', name: 'Frontend' },
     { id: 'backend', name: 'Backend' },
     { id: 'AI', name: 'AI' },
-    
+
   ]
 
   const filteredProjects = filter === 'all'
     ? projects
-    : projects.filter(project => 
+    : projects.filter(project =>
       Array.isArray(project.category)
         ? project.category.includes(filter)
         : project.category === filter
@@ -117,11 +129,10 @@ const projects = [
             <button
               key={category.id}
               onClick={() => setFilter(category.id)}
-              className={`px-5 py-2 rounded-full font-medium border transition-all duration-300 ${
-                filter === category.id
+              className={`px-5 py-2 rounded-full font-medium border transition-all duration-300 ${filter === category.id
                   ? 'bg-blue-600 text-white border-blue-600'
                   : 'bg-transparent border-gray-600 text-gray-300 hover:bg-gray-800'
-              }`}
+                }`}
             >
               {category.name}
             </button>
@@ -133,7 +144,7 @@ const projects = [
           {filteredProjects.map((project, index) => (
             <div
               key={project.id}
-               className={`project-card glass-effect rounded-3xl overflow-hidden p-4 group ${project.featured ? 'md:col-span-2 lg:col-span-1' : ''}`}
+              className={`project-card glass-effect rounded-3xl overflow-hidden p-4 group ${project.featured ? 'md:col-span-2 lg:col-span-1' : ''}`}
             >
               <div className="flex items-center gap-3 mb-4">
                 <FolderGit2 className="text-blue-400 w-6 h-6" />

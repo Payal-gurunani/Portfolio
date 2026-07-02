@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import { ChevronDown } from 'lucide-react'
-
+import profile from '../assests/profile.jpg'
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
@@ -51,6 +51,13 @@ const Hero = () => {
       
       <div className="relative z-10 text-center animate-fade-in px-4">
         <div className="mb-8">
+            <div className="mb-8 flex justify-center">
+  <img
+    src={profile}
+    alt="Payal Gurunani"
+    className="w-40 h-40 mt-10 md:w-52 md:h-52 rounded-full object-cover border-4 border-blue-500 shadow-lg hover:scale-105 transition-transform duration-300"
+  />
+</div>
           <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold mb-4">
             <span className="gradient-text">Payal Gurunani</span>
           </h1>
