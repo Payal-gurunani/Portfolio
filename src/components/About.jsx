@@ -13,11 +13,12 @@ const About = () => {
 
 
   const stats = [
-  { number: '6+', label: 'Personal Projects' },
-  { number: '2', label: 'Internships Completed' },
-  { number: '2', label: 'Hackathon Participated' },
+  { number: '8+', label: 'Projects Built' },
+  { number: '3', label: 'Internships Completed' },
   { number: '150+', label: 'DSA Problems Solved' },
-  { number: '100%', label: 'Learning Commitment' }
+  { number: '8.89', label: 'B.Tech CGPA' },
+  { number: 'MAY 2026', label: 'Graduate' },
+  { number: 'Open', label: 'Available for Work' }
 ]
 
 
@@ -27,8 +28,8 @@ const About = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold gradient-text mb-6">About Me</h2>
           <div className="h-1 w-24 mx-auto bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-8"></div>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-  I’m a passionate full stack developer who loves building real-world apps that are not only functional and  useful. From frontend UI to backend logic, I enjoy making things that people want to use.
+         <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+  I'm a full-stack developer passionate about building modern web applications and AI-powered solutions. I enjoy turning ideas into scalable, user-friendly products using modern technologies.
 </p>
         </div>
         
@@ -37,8 +38,8 @@ const About = () => {
             <div className="glass-effect rounded-3xl p-8">
               <h3 className="text-3xl font-bold mb-6">My Journey</h3>
              <p className="text-gray-300 leading-relaxed mb-6">
-                I'm currently learning DSA and improving my problem-solving skills. Alongside that, I'm working on full stack projects to build real-world applications and strengthen my development skills.
-            </p>
+  I'm a B.Tech Computer Science graduate with an <span className="font-semibold text-white">8.89 CGPA</span> and a passion for building full-stack and AI-powered applications. I'm continuously improving my DSA and problem-solving skills while working on real-world projects. I'm currently seeking entry-level Software Developer and Full-Stack Developer opportunities where I can learn, contribute, and grow.
+</p>
 
            
 

@@ -187,6 +187,32 @@ const Projects = () => {
             </div>
           ))}
         </div>
+        {/* More Projects */}
+<div className="mt-16">
+  <div className="rounded-3xl border border-gray-700 bg-gray-800/40 p-8 text-center">
+    <Github className="w-14 h-14 mx-auto text-blue-400 mb-4" />
+
+    <h3 className="text-2xl font-bold mb-3">
+      Explore More Projects
+    </h3>
+
+    <p className="text-gray-400 max-w-2xl mx-auto mb-6">
+      These are some of my featured projects. You can find many more
+      React, MERN Stack, AI, backend, and practice projects on my
+      GitHub profile.
+    </p>
+
+    <a
+      href="https://github.com/Payal-gurunani?tab=repositories"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105"
+    >
+      <Github className="w-5 h-5" />
+      View All GitHub Repositories
+    </a>
+  </div>
+</div>
       </div>
     </section>
   )
